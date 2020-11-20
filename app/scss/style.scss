@@ -316,7 +316,7 @@
             cursor: pointer;
             .people__item-info {
                 top: 0;
-                transition: all 0.5s;
+                transition: all 0.7s;
             }
         }
     }
@@ -328,7 +328,7 @@
         text-align: center;
         padding: 150px 10px 80px;
         width: 270px;
-        transition: all 0.5s;
+        transition: all 0.7s;
         opacity: 0.9;
     }
     &__item-name {
@@ -365,4 +365,40 @@
 }
 
 //people end
+//ceremony start
+.ceremony {
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+    &__item {
+        width: 370px;
+        padding: 25px;
+        box-shadow: 0 1px 6px rgba(134, 134, 134, 0.23);
+        text-align: left;
+        transition: all 0.7s;
+        &:hover {
+            background-color: $green;
+            color: #fff;
+            transition: all 0.5s;
+            .ceremony__item-title {
+                color: #fff;
+                transition: all 0.7s;
+            }
+        }
+    }
+    &__item-title {
+        font-size: 25px;
+        line-height: 38px;
+        color: $green;
+        margin-bottom: 30px;
+        font-weight: 500;
+        transition: all 0.7s;
+    }
+}
+
+//ceremony end
 @import "media";
