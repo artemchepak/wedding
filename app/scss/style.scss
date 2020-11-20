@@ -138,7 +138,6 @@
         grid-template-rows: 1fr 1fr;
         background-color: $light-green;
         text-align: left;
-        // position: absolute;
         z-index: 2;
     }
     &__item {
@@ -165,8 +164,7 @@
     &__item-text {
         margin-bottom: 30px;
     }
-    &__socials,
-    {
+    &__socials {
         display: flex;
     }
     &__socials-item {
@@ -275,6 +273,24 @@
         color: $green;
         font-weight: 500;
         transition: all 0.5s;
+        &:hover {
+            transition: all 0.5s;
+            letter-spacing: 0.07em;
+        }
+    }
+    &__bg-decor {
+        position: absolute;
+        z-index: -1;
+        width: 815px;
+        height: 812px;
+        &._right {
+            top: 3300px;
+            right: -560px;
+        }
+        &._left {
+            top: 4500px;
+            left: -560px;
+        }
     }
 }
 
@@ -402,6 +418,13 @@
 }
 
 //ceremony end
+//navigation start
+.navigation {
+    background-color: $light-green;
+    padding: 100px 0;
+}
+
+//navigation end
 //footer start
 .footer {
     padding: 50px 0;

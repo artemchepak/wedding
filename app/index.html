@@ -12,6 +12,21 @@
 </head>
 
 <body>
+    <div class="modal-form" id="modal-confirm" style="display: none;">
+        <form class="form ">
+            <h4 class="form__title title ">
+                Хотите рассчитать стоимость проекта?
+            </h4>
+            <p class="form__text ">
+                Оставьте свои контакты ниже и наш менеджер свяжется с Вами в ближайшее время
+            </p>
+            <div class="form__line ">
+                <input class="form__input " type="text " placeholder="Ваше имя"><br>
+                <input class="form__input " type="tel" placeholder="Номер вашего телефона">
+            </div>
+            <button class="form__btn " type="submit ">ОТПРАВИТЬ</button>
+        </form>
+    </div>
     <header class="header sticky">
         <div class="container">
             <nav class="header__menu">
@@ -152,7 +167,7 @@
                     12am 15 07 2020
                 </h3>
                 <div class="greetings__btn">
-                    <a href="#" class="btn">
+                    <a href="#" class="btn" data-fancybox data-src="#modal-confirm" href="javascript:;">
                             Подтвердить участие
                         </a>
                 </div>
@@ -346,7 +361,8 @@
     </section>
 
     <section class="story">
-        <!-- <div class="story__bg-decor" style="background-image: url('images/bg/story-bg.png');"></div> -->
+        <div class="story__bg-decor _right" style="background-image: url('images/bg/story-bg.png');"></div>
+        <div class="story__bg-decor _left" style="background-image: url('images/bg/story-bg.png');"></div>
         <div class="container">
             <h3 class="section__title">
                 Наша история
