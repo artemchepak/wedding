@@ -79,6 +79,12 @@ body {
     }
 }
 
+.item-title {
+    margin-bottom: 30px;
+    font-size: 30px;
+    left: 45px;
+}
+
 @keyframes radial-pulse {
     0% {
         box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5);

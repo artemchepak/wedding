@@ -40,7 +40,6 @@
 .greetings {
     margin-top: 67px;
     position: relative;
-    &__slider {}
     &__slider-item {
         height: 800px;
         background-repeat: no-repeat;
@@ -151,16 +150,13 @@
         padding: 50px;
     }
     &__item-title {
-        margin-bottom: 30px;
-        font-size: 30px;
-        left: 45px;
         &::after {
             content: "";
             position: relative;
             float: right;
             margin-right: 260px;
             top: 20px;
-            background-image: url('../images/Decoration.svg');
+            background-image: url('../images/green-line.svg');
             width: 48px;
             height: 2px;
             background-size: (100%-0%)
@@ -225,4 +221,61 @@
 }
 
 //moments end
+//story start
+.story {
+    &__item {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__img {
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, $green 7%, transparent 10%), radial-gradient(circle, $green 7%, transparent 10%);
+        background-size: 30px 30px;
+        background-position: 0 0, 50px 50px;
+        border-radius: 50%;
+        position: relative;
+        img {
+            position: absolute;
+            left: 42px;
+            top: 40px;
+            width: 430px;
+            height: 430px;
+            border-radius: 50%;
+            border: 40px solid rgba(255, 255, 255, 0.555);
+        }
+    }
+    &__info {
+        max-width: 600px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__date {
+        color: $medium-text;
+        margin-bottom: 20px;
+        display: block;
+        &::after {
+            content: "";
+            position: relative;
+            float: right;
+            margin-right: 430px;
+            top: 12px;
+            background-image: url('../images/gray-line.svg');
+            width: 25px;
+            height: 2px;
+            background-size: (100%-0%)
+        }
+    }
+    &__link {
+        font-size: 20px;
+        line-height: 30px;
+        color: $green;
+        font-weight: 500;
+        transition: all 0.5s;
+    }
+}
+
+//story end
 @import "media";
