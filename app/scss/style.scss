@@ -6,6 +6,9 @@
 .header {
     background-color: $opacity-bg;
     z-index: 9999;
+    .container {
+        padding: 0 15px;
+    }
     &__menu {
         text-align: center;
         align-content: center;
@@ -32,6 +35,8 @@
     }
 }
 
+//header end
+//greetings start
 .greetings {
     margin-top: 67px;
     position: relative;
@@ -44,7 +49,7 @@
     }
     &__card {
         position: absolute;
-        top: 180px;
+        bottom: 8px;
         right: 50px;
         max-width: 670px;
         background-color: $opacity-bg;
@@ -124,11 +129,73 @@
     }
 }
 
-//header end
+//greetings eng
 //about start
 .about {
-    text-align: center;
+    &__items {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        background-color: $light-green;
+        text-align: left;
+        // position: absolute;
+        z-index: 2;
+    }
+    &__item {
+        height: 300px;
+        width: 585px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        padding: 50px;
+    }
+    &__item-title {
+        margin-bottom: 30px;
+        font-size: 30px;
+        left: 45px;
+        &::after {
+            content: "";
+            position: relative;
+            float: right;
+            margin-right: 260px;
+            top: 20px;
+            background-image: url('../images/Decoration.svg');
+            width: 48px;
+            height: 2px;
+            background-size: (100%-0%)
+        }
+    }
+    &__item-text {
+        margin-bottom: 30px;
+    }
+    &__socials {
+        display: flex;
+    }
+    &__socials-item {
+        svg {
+            fill: $dark-text;
+            height: 15px;
+            width: 15px;
+            &:hover {
+                fill: $green;
+            }
+        }
+        &+.about__socials-item {
+            margin-left: 20px;
+        }
+    }
+    &__bg-decor {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        top: 1200px;
+        width: 497px;
+        height: 358px;
+    }
 }
 
 //about end
+//moment start
+//moment end
 @import "media";
