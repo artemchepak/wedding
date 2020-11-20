@@ -4,7 +4,8 @@
 @import "global";
 //header start
 .header {
-    background-color: rgba(255, 255, 255, 0.74);
+    background-color: $opacity-bg;
+    z-index: 9999;
     &__menu {
         text-align: center;
         align-content: center;
@@ -19,16 +20,115 @@
         padding: 20px 12px;
         color: $dark-text;
         text-transform: uppercase;
+        transition: all 0.5s;
         &+.header__menu-item {
             margin-left: 21px;
         }
         &:hover {
             background-color: $green;
             color: #fff;
-            transition: all 0.3s;
+            transition: all 0.5s;
+        }
+    }
+}
+
+.greetings {
+    margin-top: 67px;
+    position: relative;
+    &__slider {}
+    &__slider-item {
+        height: 800px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+    }
+    &__card {
+        position: absolute;
+        top: 180px;
+        right: 50px;
+        max-width: 670px;
+        background-color: $opacity-bg;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__card-top {
+        padding: 50px 75px;
+        color: $medium-text;
+    }
+    &__card-bottom {
+        padding: 30px 75px 70px;
+        background-color: $green;
+        color: #fff;
+    }
+    &__title {
+        margin-bottom: 25px;
+    }
+    &__subtitle {
+        margin-bottom: 25px;
+        display: block;
+        font-size: 25px;
+        line-height: 37px;
+    }
+    &__location-name {
+        display: block;
+        font-size: 40px;
+        line-height: 60px;
+        border-top: 2px solid $medium-text;
+        padding-top: 23px;
+        margin-bottom: 15px;
+    }
+    &__side-bar {
+        background-color: $green;
+        border-radius: 25px;
+        padding: 40px 20px 30px 40px;
+        position: absolute;
+        top: 250px;
+        left: -90px;
+        transition: all 0.5s;
+        animation: radial-pulse 3s infinite;
+        &:hover {
+            left: -25px;
+            transition: all 0.5s;
+            animation: none;
+        }
+    }
+    &__socials {
+        display: flex;
+        flex-direction: column;
+    }
+    &__socials-item {
+        text-align: center;
+        align-items: center;
+        &+.greetings__socials-item {
+            margin-top: 30px;
+        }
+    }
+    &__socials-link {
+        padding: 20px 15px 10px;
+        border-radius: 50%;
+        svg {
+            fill: #ffffff;
+            height: 20px;
+            width: 20px;
+        }
+        &:hover {
+            background-color: #fff;
+            svg {
+                fill: $green;
+                transition: all 0.5s;
+            }
+            transition: all 0.5s;
         }
     }
 }
 
 //header end
+//about start
+.about {
+    text-align: center;
+}
+
+//about end
 @import "media";

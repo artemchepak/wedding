@@ -49,9 +49,33 @@ body {
 
 .section__title {
     font-size: 48px;
-    line-height: 70px;
+    line-height: 58px;
 }
 
 .greetings__title {
     font-size: 60px;
+}
+
+.btn {
+    padding: 25px 40px;
+    background-color: #fff;
+    color: $medium-text;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    animation: radial-pulse 3s infinite;
+    transition: all 0.5s;
+    font-weight: 500;
+    &:hover {
+        background-color: $btn-hover;
+        transition: all 0.5s;
+    }
+}
+
+@keyframes radial-pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
 }
