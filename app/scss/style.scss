@@ -278,4 +278,91 @@
 }
 
 //story end
+//people start
+.people {
+    background-color: $light-green;
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__title {
+        color: $medium-text;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 45px;
+        text-align: left;
+        margin-bottom: 50px;
+        &._right {
+            text-align: right;
+        }
+    }
+    &__items {
+        display: grid;
+        width: 570px;
+        height: 570px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 30px;
+        column-gap: 30px;
+    }
+    &__item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        position: relative;
+        overflow: hidden;
+        &:hover {
+            cursor: pointer;
+            .people__item-info {
+                top: 0;
+                transition: all 0.5s;
+            }
+        }
+    }
+    &__item-info {
+        position: absolute;
+        top: 270px;
+        background-color: $green;
+        color: #fff;
+        text-align: center;
+        padding: 150px 10px 80px;
+        width: 270px;
+        transition: all 0.5s;
+        opacity: 0.9;
+    }
+    &__item-name {
+        display: block;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    &__item-type {
+        font-size: 14px;
+        line-height: 26px;
+        &::after {
+            content: "";
+            position: relative;
+            float: right;
+            margin-right: 60px;
+            top: 12px;
+            background-image: url('../images/white-line.svg');
+            width: 25px;
+            height: 2px;
+            background-size: (100%-0%)
+        }
+        &::before {
+            content: "";
+            position: relative;
+            float: left;
+            margin-left: 60px;
+            top: 1px;
+            background-image: url('../images/white-line.svg');
+            width: 25px;
+            height: 1px;
+            background-size: (100%-0%)
+        }
+    }
+}
+
+//people end
 @import "media";
