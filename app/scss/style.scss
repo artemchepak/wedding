@@ -165,7 +165,8 @@
     &__item-text {
         margin-bottom: 30px;
     }
-    &__socials {
+    &__socials,
+    {
         display: flex;
     }
     &__socials-item {
@@ -401,4 +402,41 @@
 }
 
 //ceremony end
+//footer start
+.footer {
+    padding: 50px 0;
+    background: radial-gradient(circle, $green 7%, transparent 10%), radial-gradient(circle, $green 7%, transparent 10%);
+    background-size: 30px 30px;
+    background-position: 0 0, 50px 50px;
+    &__inner {
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 15px;
+        width: 400px;
+    }
+    &__socials {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    &__socials-item {
+        svg {
+            fill: $dark-text;
+            height: 20px;
+            width: 20px;
+            &:hover {
+                fill: $green;
+            }
+        }
+        &+.footer__socials-item {
+            margin-left: 30px;
+        }
+    }
+    &__year {
+        display: block;
+        text-align: center;
+    }
+}
+
+//footer end
 @import "media";
