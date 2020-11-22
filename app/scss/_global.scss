@@ -1,96 +1,131 @@
-html {
-    box-sizing: border-box;
-}
-
-*,
-*::after,
-*::before {
-    box-sizing: inherit;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul,
-li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-    font-size: inherit;
-    font-family: 'LavanderiaC';
-    color: $green;
-    letter-spacing: 0.06em;
-    line-height: 1.5em;
-}
-
-body {
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 18px;
-    line-height: 28px;
-    color: $light-text;
-    position: relative;
-}
-
-.container {
-    max-width: 1200px;
-    padding: 100px 15px;
-    margin: 0 auto;
-}
-
-.section__title {
-    font-size: 48px;
-    line-height: 58px;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.section__subtitle {
-    margin: 0 auto 70px;
-    max-width: 600px;
-    text-align: center;
-}
-
-.greetings__title {
-    font-size: 60px;
-}
-
-.btn {
-    padding: 25px 40px;
-    background-color: #fff;
-    color: $medium-text;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    animation: radial-pulse 3s infinite;
-    transition: all 0.5s;
-    font-weight: 500;
-    &:hover {
-        background-color: $btn-hover;
-        transition: all 0.5s;
-    }
-}
-
-.item-title {
-    margin-bottom: 30px;
-    font-size: 30px;
-    left: 45px;
-}
-
-@keyframes radial-pulse {
-    0% {
-        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5);
-    }
-    100% {
-        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
-    }
-}
+            html {
+                box-sizing: border-box;
+            }
+            
+            *,
+            *::after,
+            *::before {
+                box-sizing: inherit;
+            }
+            
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+            
+            ul,
+            li {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin: 0;
+                font-size: inherit;
+                font-family: 'LavanderiaC';
+                color: $green;
+                letter-spacing: 0.06em;
+                line-height: 1.5em;
+            }
+            
+            body {
+                font-family: 'Fira Sans', sans-serif;
+                font-size: 18px;
+                line-height: 28px;
+                color: $light-text;
+                position: relative;
+            }
+            
+            .container {
+                max-width: 1200px;
+                padding: 100px 15px;
+                margin: 0 auto;
+            }
+            
+            .section__title,
+            .form__title {
+                font-size: 48px;
+                line-height: 58px;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            
+            .section__subtitle {
+                margin: 0 auto 70px;
+                max-width: 600px;
+                text-align: center;
+            }
+            
+            .greetings__title {
+                font-size: 60px;
+            }
+            
+            .btn {
+                padding: 25px 40px;
+                background-color: #fff;
+                color: $medium-text;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                animation: radial-pulse 3s infinite;
+                transition: all 0.5s;
+                font-weight: 500;
+                &:hover {
+                    background-color: $btn-hover;
+                    transition: all 0.5s;
+                    cursor: pointer;
+                }
+                &:active {
+                    background-color: $btn-active;
+                    transition: all 0.5s;
+                }
+            }
+            
+            .item-title {
+                margin-bottom: 30px;
+                font-size: 30px;
+                left: 45px;
+            }
+            
+            .form {
+                text-align: center;
+                &__text {
+                    max-width: 600px;
+                }
+                &__input {
+                    background-color: $light-green;
+                    border: none;
+                    padding: 15px;
+                    color: $light-text;
+                    width: 100%;
+                    margin-bottom: 15px;
+                    outline: none;
+                    &::placeholder {
+                        color: $light-text;
+                    }
+                }
+                &__btn {
+                    border: 3px solid $green;
+                    outline: none;
+                    margin-top: 20px;
+                    transition: all 0.5s;
+                    &:hover {
+                        border: 3px solid $btn-hover;
+                        transition: all 0.5s;
+                    }
+                }
+            }
+            
+            @keyframes radial-pulse {
+                0% {
+                    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5);
+                }
+                100% {
+                    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+                }
+            }
