@@ -33,6 +33,35 @@
             transition: all 0.5s;
         }
     }
+    &__socials {
+        display: none;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    &__socials-item {
+        svg {
+            fill: $dark-text;
+            height: 20px;
+            width: 20px;
+            &:hover {
+                fill: #fff;
+            }
+        }
+        &+.header__socials-item {
+            margin-left: 30px;
+        }
+    }
+    //burger
+    &__menu-btn {
+        width: 43px;
+        display: none;
+    }
+    &__menu-row {
+        width: 100%;
+        background-color: $dark-text;
+        height: 5px;
+        margin-bottom: 7px;
+    }
 }
 
 //header end
