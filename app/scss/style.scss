@@ -300,15 +300,16 @@
     &__bg-decor {
         position: absolute;
         z-index: -1;
-        width: 815px;
+        width: 220px;
         height: 812px;
         &._right {
             top: 3300px;
-            right: -560px;
+            right: 0;
         }
         &._left {
             top: 4500px;
-            left: -560px;
+            left: 0;
+            background-position: right center;
         }
     }
 }
