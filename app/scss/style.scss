@@ -243,7 +243,7 @@
 .story {
     &__item {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     &__img {
         width: 500px;
@@ -255,10 +255,13 @@
         position: relative;
         img {
             position: absolute;
-            left: 35px;
-            top: 35px;
-            width: 430px;
-            height: 430px;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto auto;
+            width: 90%;
+            height: 90%;
             border-radius: 50%;
             border: 40px solid rgba(255, 255, 255, 0.555);
         }
@@ -274,17 +277,6 @@
         color: $medium-text;
         margin-bottom: 20px;
         display: block;
-        &::after {
-            content: "";
-            position: relative;
-            float: right;
-            margin-right: 430px;
-            top: 12px;
-            background-image: url('../images/gray-line.svg');
-            width: 25px;
-            height: 2px;
-            background-size: (100%-0%)
-        }
     }
     &__link {
         font-size: 20px;
@@ -322,6 +314,9 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
     }
     &__title {
         color: $medium-text;
@@ -329,7 +324,7 @@
         font-size: 30px;
         line-height: 45px;
         text-align: left;
-        margin-bottom: 50px;
+        margin-bottom: 25px;
         &._right {
             text-align: right;
         }
@@ -381,7 +376,7 @@
             position: relative;
             float: right;
             margin-right: 60px;
-            top: 12px;
+            top: 14px;
             background-image: url('../images/white-line.svg');
             width: 25px;
             height: 2px;
@@ -392,10 +387,10 @@
             position: relative;
             float: left;
             margin-left: 60px;
-            top: 1px;
+            top: 14px;
             background-image: url('../images/white-line.svg');
             width: 25px;
-            height: 1px;
+            height: 2px;
             background-size: (100%-0%)
         }
     }
@@ -412,11 +407,12 @@
         row-gap: 30px;
     }
     &__item {
-        width: 370px;
+        max-width: 400px;
         padding: 25px;
         box-shadow: 0 1px 6px rgba(134, 134, 134, 0.23);
         text-align: left;
         transition: all 0.7s;
+        margin: 0 auto;
         &:hover {
             background-color: $green;
             color: #fff;
@@ -446,6 +442,9 @@
         height: 600px;
         width: 100%;
     }
+    .section__subtitle {
+        padding: 0 15px;
+    }
 }
 
 //navigation end
@@ -459,7 +458,7 @@
         margin: 0 auto;
         background-color: #fff;
         padding: 15px;
-        width: 400px;
+        max-width: 400px;
     }
     &__socials {
         display: flex;
