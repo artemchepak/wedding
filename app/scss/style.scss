@@ -236,8 +236,8 @@
         position: relative;
         img {
             position: absolute;
-            left: 42px;
-            top: 40px;
+            left: 35px;
+            top: 35px;
             width: 430px;
             height: 430px;
             border-radius: 50%;
@@ -421,7 +421,11 @@
 //navigation start
 .navigation {
     background-color: $light-green;
-    padding: 100px 0;
+    padding: 100px 0 10px;
+    &__map {
+        height: 600px;
+        width: 100%;
+    }
 }
 
 //navigation end
