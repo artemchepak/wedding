@@ -170,24 +170,14 @@
         z-index: 2;
     }
     &__item {
-        height: 300px;
-        width: 585px;
+        min-height: 300px;
+        max-width: 585px;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top center;
         padding: 50px;
-    }
-    &__item-title {
-        &::after {
-            content: "";
-            position: relative;
-            float: right;
-            margin-right: 260px;
-            top: 20px;
-            background-image: url('../images/green-line.svg');
-            width: 48px;
-            height: 2px;
-            background-size: (100%-0%)
+        img {
+            width: 100%;
         }
     }
     &__item-text {
@@ -226,7 +216,7 @@
     &__items {
         display: grid;
         height: 870px;
-        width: 1170px;
+        max-width: 1170px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         row-gap: 30px;
