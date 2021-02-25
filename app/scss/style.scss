@@ -73,7 +73,7 @@
         height: 800px;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: top center;
+        background-position: center;
     }
     &__card {
         position: absolute;
@@ -87,7 +87,7 @@
         justify-content: space-between;
     }
     &__card-top {
-        padding: 50px 75px;
+        padding: 40px 65px;
         color: $medium-text;
     }
     &__card-bottom {
@@ -110,7 +110,14 @@
         line-height: 60px;
         border-top: 2px solid $medium-text;
         padding-top: 23px;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    &__date {
+        display: block;
+        margin-bottom: 60px;
+        font-size: 40px;
+        font-weight: 700;
     }
     &__side-bar {
         background-color: $green;
@@ -407,7 +414,7 @@
         row-gap: 30px;
     }
     &__item {
-        max-width: 400px;
+        width: 400px;
         padding: 25px;
         box-shadow: 0 1px 6px rgba(134, 134, 134, 0.23);
         text-align: left;
@@ -417,6 +424,7 @@
             background-color: $green;
             color: #fff;
             transition: all 0.5s;
+            cursor: pointer;
             .ceremony__item-title {
                 color: #fff;
                 transition: all 0.7s;
@@ -458,7 +466,8 @@
         margin: 0 auto;
         background-color: #fff;
         padding: 15px;
-        max-width: 400px;
+        // max-width: 400px;
+        width: 95vw;
     }
     &__socials {
         display: flex;
@@ -481,6 +490,12 @@
     &__year {
         display: block;
         text-align: center;
+    }
+    &__credits {
+        display: block;
+        text-align: right;
+        opacity: 0.5;
+        padding: 0 20px;
     }
 }
 

@@ -20,12 +20,12 @@ $(function() {
 function myMap() {
     let mapCanvas = document.getElementById("map");
     let mapOptions = {
-        center: new google.maps.LatLng(49.9860637681822, 36.22593443398573),
-        zoom: 18
+        center: new google.maps.LatLng(50.00972110586039, 36.2392928301727),
+        zoom: 15
     };
     let map = new google.maps.Map(mapCanvas, mapOptions);
     let marker = new google.maps.Marker({
-        position: new google.maps.LatLng(49.9860637681822, 36.22593443398573),
+        position: new google.maps.LatLng(50.00972110586039, 36.2392928301727),
         map: map,
         icon: '../images/icons/map.svg'
     });
