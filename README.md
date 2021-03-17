@@ -14,6 +14,7 @@ Demo: https://artemchepak.github.io/wedding-site/app/index.html
  - CSS (SCSS)
  - JS (jQuery)
  - jQuery plugins (Slick slider, Magnific Popup)
+ - Google Maps Platform API
  - GIT
  - GULP
  - Avocode
